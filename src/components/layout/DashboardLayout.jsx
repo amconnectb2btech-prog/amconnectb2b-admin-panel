@@ -145,16 +145,7 @@ function SidebarContent({ nav, onNavigate }) {
   return (
     <>
       <div className="flex h-16 items-center border-b border-line px-6">
-        {/* <Link to="/dashboard" className="flex items-center gap-2" onClick={onNavigate}>
-          <span className="grid h-8 w-8 place-items-center rounded bg-ink-950 font-display text-white">
-            a
-          </span>
-          <span className="font-display text-lg text-ink-900">
-            amconnectb2b<span className="text-accent-700">.</span>
-          </span>
-        </Link> */}
-
-        <Link
+      <Link
           to="/dashboard"
           className="flex items-center gap-1"
           onClick={onNavigate}
