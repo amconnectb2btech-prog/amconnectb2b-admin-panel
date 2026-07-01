@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-canvas text-ink-900 font-sans antialiased;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-ink-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-ink-800 disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-line bg-white px-4 py-2 text-sm font-medium text-ink-900 transition hover:bg-canvas disabled:opacity-50;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-red-200 bg-red-50 px-4 py-2 text-sm font-medium text-red-700 transition hover:bg-red-100 disabled:opacity-50;
+  }
+  .input {
+    @apply block w-full rounded-md border border-line bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-400 focus:border-accent-700 focus:outline-none focus:ring-1 focus:ring-accent-700;
+  }
+  .label {
+    @apply block text-sm font-medium text-ink-700;
+  }
+  .card {
+    @apply rounded-lg border border-line bg-white shadow-soft;
+  }
+  .pill {
+    @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium;
+  }
+}
+
+/* Shimmer */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.03) 0%,
+    rgba(0, 0, 0, 0.08) 50%,
+    rgba(0, 0, 0, 0.03) 100%
+  );
+  background-size: 1000px 100%;
+  @apply animate-shimmer rounded;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.ink.200');
+  border-radius: 999px;
+  border: 2px solid theme('colors.canvas');
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.ink.300');
+}
+
+/* Toggle switch */
+.toggle {
+  @apply relative inline-flex h-6 w-11 cursor-pointer items-center rounded-full transition;
+}
+.toggle[data-on='true'] {
+  @apply bg-accent-700;
+}
+.toggle[data-on='false'] {
+  @apply bg-ink-200;
+}
+.toggle-thumb {
+  @apply inline-block h-4 w-4 transform rounded-full bg-white shadow transition;
+}
+.toggle[data-on='true'] .toggle-thumb {
+  @apply translate-x-6;
+}
+.toggle[data-on='false'] .toggle-thumb {
+  @apply translate-x-1;
+}
