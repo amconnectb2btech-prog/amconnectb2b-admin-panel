@@ -267,15 +267,15 @@ export default function AdminUsers() {
         <p className="text-sm font-medium text-ink-900">How roles work</p>
         <ul className="mt-3 space-y-2 text-sm text-ink-700">
           <li>
-            <strong className="text-ink-900">Super Admin</strong> — full access including
+            <strong className="text-ink-900">Super Admin</strong> full access including
             managing other admins and Firebase settings.
           </li>
           <li>
-            <strong className="text-ink-900">Admin</strong> — manages all content,
+            <strong className="text-ink-900">Admin</strong> manages all content,
             submissions, and site settings, but cannot add or remove admins.
           </li>
           <li>
-            <strong className="text-ink-900">Editor</strong> — can edit services,
+            <strong className="text-ink-900">Editor</strong> can edit services,
             testimonials, case studies, and site content. No access to settings or users.
           </li>
         </ul>

@@ -170,7 +170,7 @@ export default function Dashboard() {
             Switch the site's theme
           </h3>
           <p className="mt-2 text-sm text-ink-500">
-            Pick from six accent themes — blue, green, red, violet, amber, ink — under Settings.
+            Pick from six accent themes blue, green, red, violet, amber, ink under Settings.
             The website applies the change instantly.
           </p>
           <Link to="/settings" className="btn-secondary mt-5">

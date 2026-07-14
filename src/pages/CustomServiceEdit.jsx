@@ -302,7 +302,7 @@ export default function CustomServiceEdit() {
             />
             <p className="mt-2 text-xs text-ink-500">
               Use this for free-form sections beyond the structured fields above. Simple HTML
-              tags only — no scripts.
+              tags only no scripts.
             </p>
           </Card>
         </div>

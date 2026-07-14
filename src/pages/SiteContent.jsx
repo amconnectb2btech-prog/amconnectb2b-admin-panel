@@ -84,7 +84,7 @@ export default function SiteContent() {
     <div className="space-y-6">
       <PageHeader
         title="Site content"
-        description="Edit content shared across the public site — contact details and the top announcement."
+        description="Edit content shared across the public site contact details and the top announcement."
         action={
           <button onClick={save} disabled={saving} className="btn-primary">
             <Save size={16} />

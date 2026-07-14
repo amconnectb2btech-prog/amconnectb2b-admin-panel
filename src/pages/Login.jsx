@@ -3,6 +3,8 @@ import { useNavigate, useLocation, Navigate } from 'react-router-dom'
 import { Loader2, Mail, Lock, ArrowRight } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { useAuth } from '../context/AuthContext.jsx'
+import logoIcon from '../../src/assets/logo_icon.png'
+import logoText from '../../src/assets/logo_text.png' 
 
 export default function Login() {
   const { signIn, resetPassword, isAuthenticated, loading } = useAuth()
@@ -53,14 +55,27 @@ export default function Login() {
       {/* Form side */}
       <div className="flex flex-col justify-center px-6 py-12 lg:px-16">
         <div className="mx-auto w-full max-w-sm">
-          <div className="flex items-center gap-2">
-            <span className="grid h-8 w-8 place-items-center rounded bg-ink-950 font-display text-white">
-              a
-            </span>
-            <span className="font-display text-lg text-ink-900">
-              amconnectb2b<span className="text-accent-700">.</span>
-            </span>
-          </div>
+            <div className="flex h-12 items-center gap-1">
+                {/* Logo Icon */}
+                <div className="flex items-center justify-center h-10 overflow-hidden rounded">
+                  <img
+                    src={logoIcon}
+                    alt="AMConnect Icon"
+                    className="w-full h-full object-contain"
+                    loading="eager"
+                  />
+                </div>
+      
+                {/* Logo Text */}
+                <div className="h-8 flex items-center mt-1">
+                  <img
+                    src={logoText}
+                    alt="AMConnect B2B"
+                    className="h-full w-auto object-contain"
+                    loading="eager"
+                  />
+                </div>
+            </div>
           <h1 className="mt-12 font-display text-3xl text-ink-900">
             {mode === 'signin' ? 'Sign in' : 'Reset password'}
           </h1>
@@ -173,7 +188,7 @@ export default function Login() {
             </p>
             <p className="mt-4 max-w-md text-ink-300">
               Custom services, testimonials, case studies, contact submissions, feature flags,
-              and theme — all from one dashboard.
+              and theme all from one dashboard.
             </p>
           </div>
           <div className="text-xs text-ink-400">
@@ -191,7 +206,7 @@ function prettifyError(err) {
   const map = {
     'auth/invalid-email': 'That email doesn\'t look right.',
     'auth/user-not-found': 'No admin account with that email.',
-    'auth/wrong-password': 'Wrong password — try again, or reset it.',
+    'auth/wrong-password': 'Wrong password try again, or reset it.',
     'auth/invalid-credential': 'Invalid email or password.',
     'auth/too-many-requests': 'Too many attempts. Wait a few minutes, then try again.',
     'auth/network-request-failed': 'Network error. Check your connection.',

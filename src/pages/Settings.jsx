@@ -39,13 +39,13 @@ const FEATURES = [
   {
     key: 'showStats',
     label: 'Headline stats',
-    description: 'The 95% / 20× / 750+ numbers on the homepage.',
+    description: 'The 95% / 20x / 750+ numbers on the homepage.',
   },
-  {
-    key: 'showLiveChat',
-    label: 'Live chat widget',
-    description: 'Reserved for a third-party live chat embed.',
-  },
+  // {
+  //   key: 'showLiveChat',
+  //   label: 'Live chat widget',
+  //   description: 'Reserved for a third-party live chat embed.',
+  // },
   {
     key: 'enableContactForm',
     label: 'Contact form submissions',
@@ -148,7 +148,7 @@ export default function Settings() {
         </div>
         <p className="mb-5 text-sm text-ink-600">
           Pick the accent colour for the whole site. The base remains white with our
-          editorial typography — only the accent changes.
+          editorial typography only the accent changes.
         </p>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {THEMES.map((t) => {
@@ -204,7 +204,7 @@ export default function Settings() {
       <div className="card border-dashed bg-canvas-50/50 p-5 text-sm text-ink-600">
         <p>
           <strong className="text-ink-900">Tip:</strong> changes here take effect on
-          the public site within a few seconds of saving — visitors see them on their
+          the public site within a few seconds of saving visitors see them on their
           next page navigation.
         </p>
       </div>
